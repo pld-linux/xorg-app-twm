@@ -1,5 +1,3 @@
-# $Rev: 3367 $, $Date: 2005-08-27 17:42:47 $
-#
 Summary:	twm application
 Summary(pl):	Aplikacja twm
 Name:		xorg-app-twm
@@ -16,10 +14,7 @@ BuildRequires:	automake
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	pkgconfig >= 0.19
-BuildRoot:	%{tmpdir}/twm-%{version}-root-%(id -u -n)
-
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 twm application.
@@ -27,11 +22,9 @@ twm application.
 %description -l pl
 Aplikacja twm.
 
-
 %prep
 %setup -q -n twm-%{version}
 %patch0 -p1
-
 
 %build
 %{__aclocal}
@@ -42,17 +35,14 @@ Aplikacja twm.
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %files
 %defattr(644,root,root,755)
