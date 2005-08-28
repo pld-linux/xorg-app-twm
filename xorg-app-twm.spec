@@ -1,10 +1,12 @@
-Summary:	twm application
-Summary(pl):	Aplikacja twm
+Summary:	Tab Window Manager for the X Window System
+Summary(pl):	Twm - podstawowy zarz╠dca okien dla X Window System
+Summary(ru):	Простой оконный менеджер
+Summary(uk):	Простий в╕конний менеджер
 Name:		xorg-app-twm
 Version:	0.99.0
 Release:	0.02
 License:	MIT
-Group:		X11/Applications
+Group:		X11/Window Managers
 Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/app/twm-%{version}.tar.bz2
 # Source0-md5:	7441654fbffb6da17118948523401022
 Patch0:		twm-man.patch
@@ -14,13 +16,28 @@ BuildRequires:	automake
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-util-util-macros
+Obsoletes:	X11-twm
+Obsoletes:	XFree86-twm
+Obsoletes:	twm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-twm application.
+Twm is a window manager for the X Window System. It provides
+titlebars, shaped windows, several forms of icon management,
+user-defined macro functions, click-to-type and pointerdriven keyboard
+focus, and user-specified key and pointer button bindings.
 
 %description -l pl
-Aplikacja twm.
+Twm jest zarz╠dc╠ okien dla X Window System. Daje belki tytuЁowe,
+ramki okien, parЙ form zarz╠dzania ikonami, definiowalne makra,
+ustawianie focusu klikniЙciem lub poЁo©eniem wska╪nika myszy,
+definiowalne przypisania klawiszy i przyciskСw myszy.
+
+%description twm -l ru
+Простой компактний оконный менеджер.
+
+%description twm -l uk
+Простий компактний в╕конний менеджер.
 
 %prep
 %setup -q -n twm-%{version}
