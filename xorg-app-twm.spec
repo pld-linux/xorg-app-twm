@@ -33,10 +33,10 @@ ramki okien, parЙ form zarz╠dzania ikonami, definiowalne makra,
 ustawianie focusu klikniЙciem lub poЁo©eniem wska╪nika myszy,
 definiowalne przypisania klawiszy i przyciskСw myszy.
 
-%description twm -l ru
+%description -l ru
 Простой компактний оконный менеджер.
 
-%description twm -l uk
+%description -l uk
 Простий компактний в╕конний менеджер.
 
 %prep
