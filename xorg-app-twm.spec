@@ -3,19 +3,18 @@ Summary(pl):	Twm - podstawowy zarz±dca okien dla X Window System
 Summary(ru):	ðÒÏÓÔÏÊ ÏËÏÎÎÙÊ ÍÅÎÅÄÖÅÒ
 Summary(uk):	ðÒÏÓÔÉÊ ×¦ËÏÎÎÉÊ ÍÅÎÅÄÖÅÒ
 Name:		xorg-app-twm
-Version:	0.99.0
-Release:	0.02
+Version:	0.99.1
+Release:	0.1
 License:	MIT
 Group:		X11/Window Managers
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/app/twm-%{version}.tar.bz2
-# Source0-md5:	7441654fbffb6da17118948523401022
-Patch0:		twm-man.patch
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/app/twm-%{version}.tar.bz2
+# Source0-md5:	f9d4d68561277f82f98ee9a3156eef79
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libXmu-devel
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-util-util-macros >= 0.99.1
 Obsoletes:	X11-twm
 Obsoletes:	XFree86-twm
 Obsoletes:	twm
@@ -41,7 +40,6 @@ definiowalne przypisania klawiszy i przycisków myszy.
 
 %prep
 %setup -q -n twm-%{version}
-%patch0 -p1
 
 %build
 %{__aclocal}
@@ -56,12 +54,14 @@ definiowalne przypisania klawiszy i przycisków myszy.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	appmandir=%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc ChangeLog
 %attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*.1*
+%{_mandir}/man1/*.1x*
