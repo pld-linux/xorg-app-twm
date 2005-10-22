@@ -12,7 +12,7 @@ Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/app/twm-%{version}.tar
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.1
 Obsoletes:	X11-twm
