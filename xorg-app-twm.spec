@@ -3,18 +3,18 @@ Summary(pl):	Twm - podstawowy zarz±dca okien dla X Window System
 Summary(ru):	ðÒÏÓÔÏÊ ÏËÏÎÎÙÊ ÍÅÎÅÄÖÅÒ
 Summary(uk):	ðÒÏÓÔÉÊ ×¦ËÏÎÎÉÊ ÍÅÎÅÄÖÅÒ
 Name:		xorg-app-twm
-Version:	0.99.1
+Version:	0.99.2
 Release:	0.1
 License:	MIT
 Group:		X11/Window Managers
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/app/twm-%{version}.tar.bz2
-# Source0-md5:	f9d4d68561277f82f98ee9a3156eef79
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/app/twm-%{version}.tar.bz2
+# Source0-md5:	ce0cf9c9b5917a4c65b70985e2fc4570
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXmu-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 Obsoletes:	X11-twm
 Obsoletes:	XFree86-twm
 Obsoletes:	twm
@@ -54,8 +54,7 @@ definiowalne przypisania klawiszy i przycisków myszy.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	appmandir=%{_mandir}/man1
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
