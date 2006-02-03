@@ -9,6 +9,8 @@ License:	MIT
 Group:		X11/Window Managers
 Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/app/twm-%{version}.tar.bz2
 # Source0-md5:	b1a8abf4cd9d8d7269e6627c62ffee0f
+Source1:	twm.desktop
+Source2:	twm-xsession.desktop
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -19,6 +21,9 @@ Obsoletes:	X11-twm
 Obsoletes:	XFree86-twm
 Obsoletes:	twm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_wmpropsdir	/usr/share/wm-properties
+%define		_xsessdir	/usr/share/xsessions
 
 %description
 Twm is a window manager for the X Window System. It provides
@@ -56,6 +61,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_wmpropsdir}/twm.desktop
+install -D %{SOURCE2} $RPM_BUILD_ROOT%{_xsessdir}/twm.desktop
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -63,4 +71,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
 %attr(755,root,root) %{_bindir}/*
+%{_wmpropsdir}/twm.desktop
+%{_xsessdir}/twm.desktop
 %{_mandir}/man1/*.1x*
