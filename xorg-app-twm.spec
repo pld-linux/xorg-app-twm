@@ -70,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/twm
 %{_wmpropsdir}/twm.desktop
 %{_xsessdir}/twm.desktop
-%{_mandir}/man1/*.1x*
+%{_mandir}/man1/twm.1x*
