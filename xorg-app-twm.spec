@@ -24,6 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_wmpropsdir	/usr/share/wm-properties
 %define		_xsessdir	/usr/share/xsessions
+# for system.twmrc
+%define		_datadir	%{_sysconfdir}
 
 %description
 Twm is a window manager for the X Window System. It provides
@@ -71,7 +73,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
 %attr(755,root,root) %{_bindir}/twm
+%dir %{_sysconfdir}/X11/twm
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/twm/system.twmrc
 %{_wmpropsdir}/twm.desktop
 %{_xsessdir}/twm.desktop
 %{_mandir}/man1/twm.1x*
-%{_datadir}/X11/twm
