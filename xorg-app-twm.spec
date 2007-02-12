@@ -1,7 +1,7 @@
 Summary:	Tab Window Manager for the X Window System
-Summary(pl):	Twm - podstawowy zarz╠dca okien dla X Window System
-Summary(ru):	Простой оконный менеджер
-Summary(uk):	Простий в╕конний менеджер
+Summary(pl.UTF-8):   Twm - podstawowy zarzд┘dca okien dla X Window System
+Summary(ru.UTF-8):   п÷я─п╬я│я┌п╬п╧ п╬п╨п╬п╫п╫я▀п╧ п╪п╣п╫п╣п╢п╤п╣я─
+Summary(uk.UTF-8):   п÷я─п╬я│я┌п╦п╧ п╡я√п╨п╬п╫п╫п╦п╧ п╪п╣п╫п╣п╢п╤п╣я─
 Name:		xorg-app-twm
 Version:	1.0.3
 Release:	2
@@ -33,17 +33,17 @@ titlebars, shaped windows, several forms of icon management,
 user-defined macro functions, click-to-type and pointerdriven keyboard
 focus, and user-specified key and pointer button bindings.
 
-%description -l pl
-Twm jest zarz╠dc╠ okien dla X Window System. Daje belki tytuЁowe,
-ramki okien, parЙ form zarz╠dzania ikonami, definiowalne makra,
-ustawianie focusu klikniЙciem lub poЁo©eniem wska╪nika myszy,
-definiowalne przypisania klawiszy i przyciskСw myszy.
+%description -l pl.UTF-8
+Twm jest zarzд┘dcд┘ okien dla X Window System. Daje belki tytuе┌owe,
+ramki okien, parд≥ form zarzд┘dzania ikonami, definiowalne makra,
+ustawianie focusu klikniд≥ciem lub poе┌oе╪eniem wskaе╨nika myszy,
+definiowalne przypisania klawiszy i przyciskцЁw myszy.
 
-%description -l ru
-Простой компактний оконный менеджер.
+%description -l ru.UTF-8
+п÷я─п╬я│я┌п╬п╧ п╨п╬п╪п©п╟п╨я┌п╫п╦п╧ п╬п╨п╬п╫п╫я▀п╧ п╪п╣п╫п╣п╢п╤п╣я─.
 
-%description -l uk
-Простий компактний в╕конний менеджер.
+%description -l uk.UTF-8
+п÷я─п╬я│я┌п╦п╧ п╨п╬п╪п©п╟п╨я┌п╫п╦п╧ п╡я√п╨п╬п╫п╫п╦п╧ п╪п╣п╫п╣п╢п╤п╣я─.
 
 %prep
 %setup -q -n twm-%{version}
