@@ -1,7 +1,7 @@
 Summary:	Tab Window Manager for the X Window System
-Summary(pl.UTF-8):   Twm - podstawowy zarządca okien dla X Window System
-Summary(ru.UTF-8):   Простой оконный менеджер
-Summary(uk.UTF-8):   Простий віконний менеджер
+Summary(pl.UTF-8):	Twm - podstawowy zarządca okien dla X Window System
+Summary(ru.UTF-8):	Простой оконный менеджер
+Summary(uk.UTF-8):	Простий віконний менеджер
 Name:		xorg-app-twm
 Version:	1.0.3
 Release:	2
