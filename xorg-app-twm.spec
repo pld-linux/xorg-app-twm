@@ -14,6 +14,8 @@ Source2:	twm-xsession.desktop
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
+BuildRequires:	bison
+BuildRequires:	flex
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
