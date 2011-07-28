@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_with	gnome		# build with support for GNOME2 wm-properties
+%bcond_with	gnome2		# build with support for GNOME2 wm-properties
 #
 Summary:	Tab Window Manager for the X Window System
 Summary(pl.UTF-8):	Twm - podstawowy zarządca okien dla X Window System
@@ -70,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{?with_gnome:install -D %{SOURCE1} $RPM_BUILD_ROOT%{_wmpropsdir}/twm.desktop}
+%{?with_gnome2:install -D %{SOURCE1} $RPM_BUILD_ROOT%{_wmpropsdir}/twm.desktop}
 install -D %{SOURCE2} $RPM_BUILD_ROOT%{_xsessdir}/twm.desktop
 
 %clean
@@ -82,6 +82,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/twm
 %dir %{_sysconfdir}/X11/twm
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/twm/system.twmrc
-%{?with_gnome:%{_wmpropsdir}/twm.desktop}
+%{?with_gnome2:%{_wmpropsdir}/twm.desktop}
 %{_xsessdir}/twm.desktop
 %{_mandir}/man1/twm.1x*
