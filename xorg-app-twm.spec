@@ -8,7 +8,7 @@ Summary(ru.UTF-8):	Простой оконный менеджер
 Summary(uk.UTF-8):	Простий віконний менеджер
 Name:		xorg-app-twm
 Version:	1.0.7
-Release:	2
+Release:	3
 License:	MIT
 Group:		X11/Window Managers
 Source0:	http://xorg.freedesktop.org/releases/individual/app/twm-%{version}.tar.bz2
@@ -85,4 +85,4 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/twm/system.twmrc
 %{?with_gnome2:%{_wmpropsdir}/twm.desktop}
 %{_xsessdir}/twm.desktop
-%{_mandir}/man1/twm.1x*
+%{_mandir}/man1/twm.1*
