@@ -1,14 +1,14 @@
 #
 # Conditional build:
 %bcond_with	gnome2		# build with support for GNOME2 wm-properties
-#
+
 Summary:	Tab Window Manager for the X Window System
 Summary(pl.UTF-8):	Twm - podstawowy zarządca okien dla X Window System
 Summary(ru.UTF-8):	Простой оконный менеджер
 Summary(uk.UTF-8):	Простий віконний менеджер
 Name:		xorg-app-twm
 Version:	1.0.7
-Release:	3
+Release:	4
 License:	MIT
 Group:		X11/Window Managers
 Source0:	http://xorg.freedesktop.org/releases/individual/app/twm-%{version}.tar.bz2
@@ -24,6 +24,7 @@ BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.17
 BuildRequires:	xorg-util-util-macros >= 1.8
+Suggests:	xterm
 Obsoletes:	X11-twm < 1:7.0.0
 Obsoletes:	XFree86-twm < 1:7.0.0
 Obsoletes:	twm < 1:7.0.0
