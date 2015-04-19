@@ -7,12 +7,12 @@ Summary(pl.UTF-8):	Twm - podstawowy zarządca okien dla X Window System
 Summary(ru.UTF-8):	Простой оконный менеджер
 Summary(uk.UTF-8):	Простий віконний менеджер
 Name:		xorg-app-twm
-Version:	1.0.8
-Release:	3
+Version:	1.0.9
+Release:	1
 License:	MIT
 Group:		X11/Window Managers
 Source0:	http://xorg.freedesktop.org/releases/individual/app/twm-%{version}.tar.bz2
-# Source0-md5:	4b28317d4a9f7ca61bef8462e132bd4c
+# Source0-md5:	59a6f076cdacb5f6945dac809bcf4906
 Source1:	twm.desktop
 Source2:	twm-xsession.desktop
 URL:		http://xorg.freedesktop.org/
@@ -21,7 +21,12 @@ BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libICE-devel
+BuildRequires:	xorg-lib-libSM-devel
+BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXmu-devel
+BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.17
 BuildRequires:	xorg-util-util-macros >= 1.8
 Suggests:	xterm
