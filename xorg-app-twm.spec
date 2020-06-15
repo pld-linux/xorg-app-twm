@@ -7,12 +7,12 @@ Summary(pl.UTF-8):	Twm - podstawowy zarządca okien dla X Window System
 Summary(ru.UTF-8):	Простой оконный менеджер
 Summary(uk.UTF-8):	Простий віконний менеджер
 Name:		xorg-app-twm
-Version:	1.0.10
+Version:	1.0.11
 Release:	1
 License:	MIT
 Group:		X11/Window Managers
-Source0:	https://xorg.freedesktop.org/releases/individual/app/twm-%{version}.tar.bz2
-# Source0-md5:	e322c08eeb635f924ede5b8eba3db54e
+Source0:	https://xorg.freedesktop.org/releases/individual/app/twm-%{version}.tar.xz
+# Source0-md5:	e2a92734871575b01308e62822915981
 Source1:	twm.desktop
 Source2:	twm-xsession.desktop
 URL:		https://xorg.freedesktop.org/
@@ -21,6 +21,7 @@ BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.11
 BuildRequires:	xorg-lib-libICE-devel
 BuildRequires:	xorg-lib-libSM-devel
 BuildRequires:	xorg-lib-libX11-devel
@@ -29,6 +30,7 @@ BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.17
 BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xz
 Suggests:	xterm
 Obsoletes:	X11-twm < 1:7.0.0
 Obsoletes:	XFree86-twm < 1:7.0.0
@@ -85,7 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %attr(755,root,root) %{_bindir}/twm
 %dir %{_sysconfdir}/X11/twm
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/twm/system.twmrc
